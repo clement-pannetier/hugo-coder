@@ -48,7 +48,7 @@
       {{ end }}
     {{ end }}
 
-    {{ if  or (eq .Site.Params.colorscheme "auto") (eq .Site.Params.colorscheme "dark") }}
+    {{ if  or (eq .Site.Params.colorScheme "auto") (eq .Site.Params.colorScheme "dark") }}
       {{ if .Site.IsServer }}
         {{ $cssOpts := (dict "targetPath" "css/coder-dark.css" "enableSourceMap" true ) }}
         {{ $styles := resources.Get "scss/coder-dark.scss" | resources.ExecuteAsTemplate "style.coder-dark.css" . | toCSS $cssOpts }}
@@ -60,11 +60,11 @@
       {{ end }}
     {{ end }}
 
-    {{ range .Site.Params.custom_css }}
+    {{ range .Site.Params.customCSS }}
       <link rel="stylesheet" href="{{ . | relURL }}" />
     {{ end }}
 
-    {{ range .Site.Params.custom_scss }}
+    {{ range .Site.Params.customSCSS }}
       {{/* We don't change the targetPath to because it's transparent to users */}}
       {{ if $.Site.IsServer }}
         {{ $cssOpts := (dict "enableSourceMap" true ) }}
@@ -87,9 +87,9 @@
   </head>
 
   {{ $csClass := "colorscheme-light" }}
-  {{ if eq .Site.Params.colorscheme "dark" }}
+  {{ if eq .Site.Params.colorScheme "dark" }}
     {{ $csClass = "colorscheme-dark" }}
-  {{ else if eq .Site.Params.colorscheme "auto" }}
+  {{ else if eq .Site.Params.colorScheme "auto" }}
     {{ $csClass = "colorscheme-auto" }}
   {{ end }}
   <body class="{{ $csClass }}{{ if .Site.Params.rtl }} rtl{{ end }}">
@@ -103,7 +103,7 @@
       {{ partial "footer.html" . }}
     </main>
 
-    {{ range .Site.Params.custom_js }}
+    {{ range .Site.Params.customJS }}
       <script src="{{ . | relURL }}"></script>
     {{ end }}
 

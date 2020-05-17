@@ -1,5 +1,5 @@
 {{- if isset .Site.Params "utteranc" -}}
-  {{- if and (isset .Site.Params.utteranc "repo") (not (eq .Site.Params.utteranc.repo "" )) (eq (.Params.disable_comments | default false) false) -}}
+  {{- if and (isset .Site.Params.utteranc "repo") (not (eq .Site.Params.utteranc.repo "" )) (eq (.Params.disableComments | default false) false) -}}
   <script src="https://utteranc.es/client.js"
     repo= "{{ .Site.Params.utteranc.repo }}"
     issue-term="{{ default "title" .Site.Params.utteranc.issueTerm }}"
