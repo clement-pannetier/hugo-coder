@@ -8,9 +8,9 @@ defaultContentLanguage = "en"
 
 paginate = 20
 
-pygmentsstyle = "b2"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+pygmentsStyle = "b2"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
 
 disqusShortname = "yourdiscussshortname"
 
