@@ -34,11 +34,11 @@ models:
       - type: boolean
         name: canonifyURLs
       - type: string
-        name: pygmentsstyle
+        name: pygmentsStyle
       - type: boolean
-        name: pygmentscodefences
+        name: pygmentsCodeFences
       - type: boolean
-        name: pygmentscodefencesguesssyntax
+        name: pygmentsCodeFencesGuessSyntax
       - type: string
         name: disqusShortname
       - type: object
